@@ -7,21 +7,13 @@ Original file is located at
     https://colab.research.google.com/drive/1ZSOVFoDEWz43ZWBsDsQ1sP6-xnjQTHXJ
 """
 
-P_inverse = p.inv()
-P_inverse
-
-result = P_inverse*M
-D=result*p
-D
-
 from scipy import array
 from scipy.linalg import funm
-m = array([[5,-2],[1,2]])
-funm(m,lambda x: x**2 - 7*x +12)
-
 from sympy import *
 from numpy import *
 
+m = array([[5,-2],[1,2]])
+funm(m,lambda x: x**2 - 7*x +12)
 
 M= Matrix([[2,0,0],[1,4,-1],[-2,-4,4]])
 #M
@@ -37,3 +29,10 @@ print(sym_eigenvects)
 p=Matrix(sym_eigenvects)
 p=p.transpose()
 p
+
+P_inverse = p.inv()
+P_inverse
+
+result = P_inverse*M
+D=result*p
+D
